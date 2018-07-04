@@ -1,5 +1,5 @@
 # cpuBitonicSort
-openMP implementation of parallel bitonic sort
+openMP implementation of parallel bitonic sort    (Note:- should be complied with the option -fopenmp with g++)
 # Bitonic Sort 
 Bitonic Sort is a classic parallel algorithm for sorting.
 
@@ -65,5 +65,5 @@ T(n) = log(n) + log(n)-1 + log(n)-2 + … + 1 = log(n) · (log(n)+1) / 2
 As, each stage of the sorting network consists of n/2 comparators. Therefore total Θ(n log2n) comparators.
 
 this explanation of bitonic sort is taken from geeksforgeeks and the explanation was contributed by Rahul Agarwal
-Note:- should be complied with the option -fopenmp with g++
+
 
