@@ -91,13 +91,11 @@ void bitonicSequenceGenerator(int startIndex , int lastIndex , int *ar)         
 }
 int main()                                                                                        //main driver function
 {   
-    omp_set_dynamic(0);                                                                          //disabled so that the os doesnt override the thread settings
-    cout<<"enter the number of threads ";                                                           
-    int threads;
-    cin>>threads;
-    omp_set_num_threads(threads);                                                                //set the no of threads
+    omp_set_dynamic(0);                                                                          //disabled so that the os doesnt override the thread settings                                                     
+    int maxNumberOfThreads = omp_get_num_procs();                                                //gives number of logical cores
+    omp_set_num_threads(maxNumberOfThreads);                                                     //set the no of threads
     int n;
-    cout<<"enter the number of elements to be sorted (number should be in the order of 2^n";     //try to fix this issue 
+    cout<<"enter the number of elements to be sorted (number should be in the order of 2^n)";     //try to fix this issue 
     cin>>n;
     int *ar = new int[n];                                                                               
     for(int i=0;i<n;i++)
