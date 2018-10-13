@@ -1,3 +1,5 @@
+// richu shaji abraham richursa
+
 #include<iostream>                                                                              //for std::cout ,std::cin
 #include<omp.h>                                                                                 
 using namespace std;
